@@ -1,0 +1,213 @@
+/* Base Styles for Larger Screens */
+.container {
+	display: flex;
+	height: 500px;
+	flex-direction: column;
+	padding: 20px 40px;
+	gap: 40px;
+	position: relative;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.containerOne {
+	display: flex;
+	gap: 20px;
+	z-index: 10;
+}
+
+.containerLeft {
+	padding: 10px 40px;
+	flex: 1;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+}
+
+.containerRight {
+	position: relative;
+	height: 400px;
+	flex: 3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 40px;
+	left: 50px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+.linkText {
+	text-decoration: none;
+	cursor: pointer;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+.linkText:hover {
+	color: #ffcc00;
+}
+
+.containerTwo {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px 40px;
+	height: 280px;
+	border: 2px solid #ccc;
+	border-radius: 20px;
+	z-index: 10;
+}
+
+.article {
+	font-size: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+.linkContainer {
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+	padding: 20px;
+	gap: 25px;
+	font-weight: 600;
+}
+
+.link:hover {
+	transform: scale(1.1);
+}
+
+.containerThree {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px 40px;
+	height: 350px;
+	border: 2px solid #ccc;
+	border-radius: 20px;
+	z-index: 10;
+}
+
+.title {
+	text-transform: uppercase;
+}
+
+/* ----------------- Responsive Styles ----------------- */
+
+/* Mobile Phones (up to 480px) */
+@media (max-width: 480px) {
+	.container {
+		padding: 10px 15px;
+		gap: 20px;
+	}
+
+	.background {
+		display: none; /* Hide background image on small screens */
+	}
+
+	.containerOne,
+	.containerTwo,
+	.containerThree {
+		padding: 10px;
+		height: auto;
+	}
+
+	.containerLeft {
+		display: none; /* Hide containerLeft on small screens */
+	}
+
+	.containerRight {
+		height: 300px;
+	}
+
+	.overlay {
+		bottom: 10px;
+		left: 10px;
+		padding: 5px 10px;
+		font-size: 0.75rem;
+	}
+
+	.linkText {
+		font-size: 0.8rem;
+	}
+
+	.article {
+		font-size: 20px;
+	}
+
+	.title {
+		font-size: 1.25rem;
+	}
+}
+
+/* Small Tablets (480px to 768px) */
+@media (min-width: 480px) and (max-width: 768px) {
+	.container {
+		padding: 15px 20px;
+		gap: 30px;
+	}
+
+	.containerTwo,
+	.containerThree {
+		padding: 10px 20px;
+		height: auto;
+	}
+
+	.containerLeft {
+		display: none; /* Hide containerLeft on medium screens */
+	}
+
+	.containerRight {
+		height: 350px;
+	}
+
+	.linkText {
+		font-size: 1rem;
+	}
+
+	.article {
+		font-size: 24px;
+	}
+
+	.overlay {
+		bottom: 20px;
+		left: 20px;
+		padding: 8px 15px;
+		font-size: 0.875rem;
+	}
+}
+
+/* Tablets and Small Desktops (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.container {
+		padding: 20px 30px;
+		gap: 35px;
+	}
+
+	.containerTwo,
+	.containerThree {
+		padding: 15px 25px;
+		height: auto;
+	}
+
+	.containerLeft {
+		flex: 1; /* Show containerLeft on larger screens */
+		padding: 10px 10px;
+	}
+}
+
+@media (min-width: 1024px) {
+}

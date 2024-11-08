@@ -1,0 +1,10 @@
+{
+	"Navigation": {
+		"home": "Home",
+		"blog": "Blog",
+		"story": "Story",
+		"about": "About",
+		"contact": "Contact",
+		"search_placeholder": "Search something..."
+	}
+}

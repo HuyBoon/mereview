@@ -1,0 +1,127 @@
+/* Footer Container */
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px;
+	background-color: #f3efe0;
+	box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contactSection {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1200px;
+	gap: 20px;
+}
+
+.linksSection,
+.socialSection {
+	flex: 1;
+}
+
+.subscribeSection {
+	flex: 2;
+	text-align: center;
+}
+
+/* Links */
+.links {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	font-size: 18px;
+}
+
+.links a {
+	color: #333;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.links a:hover {
+	color: #5ea755;
+}
+
+/* Subscription Form */
+.subscribeForm {
+	display: flex;
+	gap: 10px;
+	width: 100%;
+	max-width: 500px;
+	margin-top: 10px;
+}
+
+.subscribeForm input {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+.subscribeForm button {
+	padding: 10px 20px;
+	background-color: #71787d;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+.subscribeForm button:hover {
+	background-color: #5ea755;
+	transform: scale(1.05);
+}
+
+/* Social Icons */
+.socialIcons {
+	display: flex;
+	gap: 20px;
+	font-size: 18px;
+}
+
+.iconWrapper {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	cursor: pointer;
+}
+
+.iconWrapper:hover {
+	transform: scale(1.05);
+}
+
+.icon {
+	font-size: 24px;
+}
+
+/* Footer Note */
+.footerNote {
+	margin-top: 20px;
+	font-size: 14px;
+	color: #777;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+	.contactSection {
+		flex-direction: column;
+		align-items: center;
+	}
+	.subscribeSection {
+		display: none; /* Hidden on smaller screens */
+	}
+}
+
+@media (max-width: 480px) {
+	.links {
+		font-size: 16px;
+		align-items: center;
+	}
+}
