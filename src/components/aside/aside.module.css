@@ -1,0 +1,109 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.article {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.linkContainer {
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+	padding: 10px 20px 20px;
+	gap: 30px;
+	font-weight: 500;
+}
+
+.linkContainer div {
+	transition: transform 0.2s ease;
+}
+
+.linkContainer div:hover {
+	transform: scale(1.05);
+}
+
+.active {
+	font-weight: bold;
+	transform: scale(1.05);
+}
+
+/* Responsive for screens below 480px */
+@media (max-width: 480px) {
+	.linkContainer {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		gap: 15px;
+		padding: 10px;
+	}
+	.article {
+		font-size: 20px;
+	}
+	.linkContainer div {
+		font-size: 14px;
+		padding: 3px;
+		border: 1px solid #ccc;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+	.linkContainer {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+		padding: 10px;
+	}
+	.article {
+		font-size: 22px;
+	}
+
+	.linkContainer div {
+		font-size: 16px;
+		padding: 5px;
+		border: 1px solid #ccc;
+	}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+	.linkContainer {
+		gap: 15px;
+	}
+	.article {
+		font-size: 20px;
+	}
+	.linkContainer div {
+		font-size: 16px;
+		padding: 5px;
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+	.linkContainer {
+		gap: 15px;
+	}
+	.article {
+		font-size: 20px;
+	}
+	.linkContainer div {
+		font-size: 18px;
+		padding: 5px;
+	}
+}
+
+@media (min-width: 1280px) {
+	.linkContainer {
+		gap: 20px;
+	}
+	.article {
+		font-size: 20px;
+	}
+	.linkContainer div {
+		font-size: 20px;
+		padding: 5px;
+	}
+}

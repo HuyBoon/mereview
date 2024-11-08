@@ -14,11 +14,11 @@ import LocalSwitcher from "../localSwitcher/local-switcher";
 import styles from "./header.module.css";
 
 const navLinks = [
-	{ href: "/", labelKey: "home" },
-	{ href: "/mereview/mexedich", labelKey: "blog" },
-	{ href: "/journal", labelKey: "story" },
-	{ href: "/about", labelKey: "about" },
-	{ href: "/contact", labelKey: "contact" },
+	{ href: "/vi", labelKey: "home" },
+	{ href: "vi/mereview/mexedich", labelKey: "blog" },
+	{ href: "vi/journal", labelKey: "story" },
+	{ href: "vi/about", labelKey: "about" },
+	{ href: "vi/contact", labelKey: "contact" },
 ];
 
 const Header = () => {
