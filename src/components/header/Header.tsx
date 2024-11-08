@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import MobileMenu from "../mobileMenu/MobileMenu";
 import SearchModal from "../searchModal/SearchModal";
 import { IoSearchSharp } from "react-icons/io5";
@@ -13,19 +14,22 @@ import { useTranslations } from "next-intl";
 import LocalSwitcher from "../localSwitcher/local-switcher";
 import styles from "./header.module.css";
 
-const navLinks = [
-	{ href: "/vi", labelKey: "home" },
-	{ href: "vi/mereview/mexedich", labelKey: "blog" },
-	{ href: "vi/journal", labelKey: "story" },
-	{ href: "vi/about", labelKey: "about" },
-	{ href: "vi/contact", labelKey: "contact" },
-];
-
 const Header = () => {
 	const t = useTranslations("Navigation");
 	const [searchOpen, setSearchOpen] = useState(false);
 	const [showMenu, setShowMenu] = useState(false);
 	const router = useRouter();
+	const pathname = usePathname();
+	const locale = pathname.split("/")[1] || "en";
+
+	// Define navLinks with locale dynamically
+	const navLinks = [
+		{ href: `/${locale}`, labelKey: "home" },
+		{ href: `/${locale}/mereview/mexedich`, labelKey: "blog" },
+		{ href: `/${locale}/journal`, labelKey: "story" },
+		{ href: `/${locale}/about`, labelKey: "about" },
+		{ href: `/${locale}/contact`, labelKey: "contact" },
+	];
 
 	const toggleSearch = () => {
 		setSearchOpen(!searchOpen);
@@ -39,7 +43,7 @@ const Header = () => {
 		<header className={styles.container}>
 			<div className={styles.logoContainer}>
 				<Image src="/logo.png" alt="Mê Review logo" width={70} height={70} />
-				<Link href="/" className={styles.logo}>
+				<Link href={`/${locale}`} className={styles.logo}>
 					Mê Review
 				</Link>
 			</div>
